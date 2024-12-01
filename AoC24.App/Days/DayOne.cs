@@ -16,9 +16,14 @@ internal class DayOne {
     void InitializeInput() {
         int index = 0;
         foreach(string line in Input) {
-            string[] split = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-            FirstList[index] = int.Parse(split[0]);
-            SecondList[index] = int.Parse(split[1]);
+            int[] split = line
+                .Split(Array.Empty<char>(), StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+
+            FirstList[index] = split[0];
+            SecondList[index] = split[1];
+
             index++;
         }
     }
