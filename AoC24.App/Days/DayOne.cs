@@ -3,11 +3,9 @@
 namespace AoC24.Days;
 
 internal class DayOne {
-    const string InputDelemiter = "   ";
     public static IEnumerable<string> Input { get; } = File.ReadLines("Inputs/DayOneInput.txt");
     public int[] FirstList { get; private set; } = [];
     public int[] SecondList { get; private set; } = [];
-    public Dictionary<int, string> test = [];
     
     public DayOne() {
         FirstList = new int[Input.Count()];
@@ -18,7 +16,7 @@ internal class DayOne {
     void InitializeInput() {
         int index = 0;
         foreach(string line in Input) {
-            string[] split = line.Split(InputDelemiter);
+            string[] split = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
             FirstList[index] = int.Parse(split[0]);
             SecondList[index] = int.Parse(split[1]);
             index++;
