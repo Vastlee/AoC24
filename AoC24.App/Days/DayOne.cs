@@ -1,13 +1,12 @@
-﻿using System.Collections.Generic;
+﻿namespace AoC24.Days;
 
-namespace AoC24.Days;
-
-internal class DayOne {
-    public static IEnumerable<string> Input { get; } = File.ReadLines("Inputs/DayOneInput.txt");
+internal class DayOne : Day {
     public int[] FirstList { get; private set; } = [];
     public int[] SecondList { get; private set; } = [];
     
     public DayOne() {
+        DayNumber = 1;
+        InitDay();
         FirstList = new int[Input.Count()];
         SecondList = new int[Input.Count()];
         InitializeInput();
