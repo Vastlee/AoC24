@@ -2,7 +2,7 @@
 
 namespace AoC24;
 internal abstract class Day {
-    public IEnumerable<string> Input { get; private set; } = [];
+    public string[] Input { get; protected set; } = [];
 
     const string LocationDefault = "Inputs/";
     public int DayNumber { get; protected set; }
@@ -10,8 +10,12 @@ internal abstract class Day {
     public string FileName { get; protected  set; } = string.Empty;
     public string FilePath => Path.Combine(Location, FileName);
 
-    public void InitDay() {
+    public void InitDay(int day) {
+        DayNumber = day;
         FileName = "InputDay" + DayNumber.ToString("D2") + ".txt";
-        Input = File.ReadLines(FilePath);
+        Input = File.ReadAllLines(FilePath);
     }
+
+    public abstract void PartOne();
+    public abstract void PartTwo();
 }

@@ -1,4 +1,9 @@
 ﻿using AoC24.Days;
 
-Console.WriteLine($"{new DayOne().PartOne()}");
-Console.WriteLine($"{new DayOne().PartTwo()}");
+string[] testInput =
+{
+"xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))"
+};
+
+new DayThree().PartOne();
+new DayThree().PartTwo();

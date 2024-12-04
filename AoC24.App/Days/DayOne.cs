@@ -5,8 +5,7 @@ internal class DayOne : Day {
     public int[] SecondList { get; private set; } = [];
     
     public DayOne() {
-        DayNumber = 1;
-        InitDay();
+        InitDay(1);
         FirstList = new int[Input.Count()];
         SecondList = new int[Input.Count()];
         InitializeInput();
@@ -27,7 +26,7 @@ internal class DayOne : Day {
         }
     }
 
-    public int PartOne() {
+    public override void PartOne() {
         int totalDistance = 0;
         int distance;
         int[] firstOrdered = [.. FirstList.Order()];
@@ -38,10 +37,10 @@ internal class DayOne : Day {
             totalDistance += distance;
         }
 
-        return totalDistance;
+        Console.WriteLine(totalDistance.ToString());
     }
 
-    public int PartTwo() {
+    public override void PartTwo() {
         int similarity = 0;
         int matchCount = 0;
         Dictionary<int, int> used = [];
@@ -54,6 +53,6 @@ internal class DayOne : Day {
             similarity += number * matchCount;
         }
 
-        return similarity;
+        Console.WriteLine(similarity.ToString());
     }
 }
