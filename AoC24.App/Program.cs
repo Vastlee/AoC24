@@ -14,4 +14,4 @@ string[] testInput = {
 };
 
 new DayFour().PartOne();
-//new DayFour().PartTwo();
+new DayFour().PartTwo();
