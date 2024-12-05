@@ -1,9 +1,17 @@
 ﻿using AoC24.Days;
 
-string[] testInput =
-{
-"xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))"
+string[] testInput = {
+"MMMSXXMASM",
+"MSAMXMSMSA",
+"AMXSXMAAMM",
+"MSAMASMSMX",
+"XMASAMXAMM",
+"XXAMMXXAMA",
+"SMSMSASXSS",
+"SAXAMASAAA",
+"MAMMMXMMMM",
+"MXMXAXMASX"
 };
 
-new DayThree().PartOne();
-new DayThree().PartTwo();
+new DayFour().PartOne();
+//new DayFour().PartTwo();
